@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+
+  <style>
+    #bto-retoceder {
+      display: none;
+    }
+  </style>
+
+  <body>
+    <h1>productos: <span id="mostrar-productos"></span></h1>
+    <div id="contenedor_inputs">
+      <input type="text" id="myInput" placeholder="Escribe algo..." />
+    </div>
+    <div style="display: flex">
+      <button id="bto-retoceder">retoceder</button>
+      <button id="bto-avanzar">avanzar</button>
+    </div>
+  </body>
+
+  <script>
+    let preguntosas = [];
+    fetch("/datos.json")
+      .then((response) => response.json())
+      .then((datos) => (preguntosas = datos.rentaInmobiliaria));
+    let contadorArray = 0;
+
+    document.getElementById("bto-avanzar").addEventListener("click", () => {
+      let mostarProductos = document.getElementById("mostrar-productos");
+
+      //               10              0
+      if (preguntosas.length > contadorArray) {
+        contadorArray++;
+        mostarProductos.innerText = preguntosas[contadorArray].pregunta;
+      } else {
+        contadorArray = 0;
+        mostarProductos.innerText = preguntosas[contadorArray].pregunta;
+      }
+      retocerder();
+      inputtype(preguntosas[contadorArray]);
+    });
+
+    function retocerder() {
+      if (contadorArray > 0) {
+        document.getElementById("bto-retoceder").style.display = "block";
+      } else {
+        document.getElementById("bto-retoceder").style.display = "none";
+      }
+    }
+
+    document.getElementById("bto-retoceder").addEventListener("click", () => {
+      let mostarProductos = document.getElementById("mostrar-productos");
+      if (contadorArray > 0) {
+        contadorArray--;
+        mostarProductos.innerText = preguntosas[contadorArray].pregunta;
+      } else {
+        contadorArray = preguntosas.length;
+        mostarProductos.innerText = preguntosas[contadorArray].pregunta;
+      }
+
+      retocerder();
+      inputtype(preguntosas[contadorArray]);
+    });
+
+    function inputtype(pregjtassa) {
+      pregjtassa.tipo_input !== "radio"
+        ? normalInput(pregjtassa.tipo_input)
+        : checkbox(pregjtassa.opciones);
+    }
+
+    function normalInput(date) {
+      let valoresDate = `<input type="${date}" id="myInput" placeholder="Escribe algo..." />`;
+
+      // Crear un contenedor para los inputs
+      const container = document.getElementById("contenedor_inputs");
+      container.innerHTML = valoresDate;
+    }
+
+    function checkbox(opcionsCheckbox) {
+      let valoresCheckbox = "";
+
+      opcionsCheckbox.forEach((e) => {
+        valoresCheckbox += `<input ${e.valor} name="option" type="radio" id="myInput"/>
+          <label>${e.texto_al_cambiar}</label> <br/>`;
+      });
+
+      // Crear un contenedor para los inputs
+      const container = document.getElementById("contenedor_inputs");
+      container.innerHTML = valoresCheckbox;
+    }
+  </script>
+</html>

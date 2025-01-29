@@ -1,0 +1,154 @@
+{
+    "rentaInmobiliaria": [
+      {
+        "id": "renta-001",
+        "pregunta": "¿En qué ciudad se firma el contrato?",
+        "tipo_input": "text",
+        "clave": "ciudad_firma"
+      },
+      {
+        "id": "renta-002",
+        "pregunta": "¿Cuál es la fecha de inicio del contrato?",
+        "tipo_input": "date",
+        "clave": "fecha_inicio_contrato"
+      },
+      {
+        "id": "renta-003",
+        "pregunta": "¿Cuántos meses durará el contrato?",
+        "tipo_input": "number",
+        "opciones": [6, 12, 18, 24],
+        "clave": "duracion_contrato"
+      },
+      {
+        "id": "renta-004",
+        "pregunta": "¿Cuál es el nombre completo del propietario?",
+        "tipo_input": "text",
+        "clave": "nombre_propietario"
+      },
+      {
+        "id": "renta-005",
+        "pregunta": "¿Cuál es el documento de identidad del propietario?",
+        "tipo_input": "number",
+        "clave": "dni_propietario"
+      },
+      {
+        "id": "renta-006",
+        "pregunta": "¿Cuál es el nombre completo del arrendatario?",
+        "tipo_input": "text",
+        "clave": "nombre_arrendatario"
+      },
+      {
+        "id": "renta-007",
+        "pregunta": "¿Cuál es el documento de identidad del arrendatario?",
+        "tipo_input": "number",
+        "clave": "dni_arrendatario"
+      },
+      {
+        "id": "renta-008",
+        "pregunta": "¿Cuál es la dirección del inmueble?",
+        "tipo_input": "text",
+        "clave": "direccion_inmueble"
+      },
+      {
+        "id": "renta-009",
+        "pregunta": "¿Qué tipo de inmueble es? (ejemplo: casa, departamento, oficina)",
+        "tipo_input": "text",
+        "clave": "tipo_inmueble"
+      },
+      {
+        "id": "renta-010",
+        "pregunta": "¿Cuál es el área del inmueble en m²?",
+        "tipo_input": "number",
+        "clave": "area_m2"
+      },
+      {
+        "id": "renta-011",
+        "pregunta": "¿Cuántas habitaciones tiene el inmueble?",
+        "tipo_input": "number",
+        "clave": "num_habitaciones"
+      },
+      {
+        "id": "renta-012",
+        "pregunta": "¿Cuántos baños tiene el inmueble?",
+        "tipo_input": "number",
+        "clave": "num_banos"
+      },
+      {
+        "id": "renta-013",
+        "pregunta": "¿El inmueble incluye estacionamiento?",
+        "tipo_input": "radio",
+        "opciones": [
+          { "valor": "Sí", "texto_al_cambiar": "Incluye estacionamiento." },
+          { "valor": "No", "texto_al_cambiar": "No incluye estacionamiento." }
+        ],
+        "clave": "estacionamiento"
+      },
+      {
+        "id": "renta-014",
+        "pregunta": "¿Qué servicios están incluidos en la renta?",
+        "tipo_input": "radio",
+        "opciones": [
+          { "valor": "Luz", "texto_al_cambiar": "El servicio de luz está incluido en la renta." },
+          { "valor": "Agua", "texto_al_cambiar": "El servicio de agua está incluido en la renta." },
+          { "valor": "Internet", "texto_al_cambiar": "El servicio de internet está incluido en la renta." },
+          { "valor": "Gas", "texto_al_cambiar": "El servicio de gas está incluido en la renta." }
+        ],
+        "clave": "servicios_incluidos"
+      },
+      {
+        "id": "renta-015",
+        "pregunta": "¿Cuál es el monto mensual de la renta (en soles)?",
+        "tipo_input": "number",
+        "clave": "monto_mensual_renta"
+      },
+      {
+        "id": "renta-016",
+        "pregunta": "¿El inmueble permite mascotas?",
+        "tipo_input": "radio",
+        "opciones": [
+          { "valor": "Sí", "texto_al_cambiar": "Se permite la tenencia de mascotas." },
+          { "valor": "No", "texto_al_cambiar": "No se permite la tenencia de mascotas." }
+        ],
+        "clave": "mascotas"
+      },
+      {
+        "id": "renta-017",
+        "pregunta": "¿El inmueble está amoblado?",
+        "tipo_input": "radio",
+        "opciones": [
+          { "valor": "Sí", "texto_al_cambiar": "El inmueble está amoblado." },
+          { "valor": "No", "texto_al_cambiar": "El inmueble no está amoblado." }
+        ],
+        "clave": "amoblado"
+      },
+      {
+        "id": "renta-018",
+        "pregunta": "¿El inmueble cuenta con aire acondicionado?",
+        "tipo_input": "radio",
+        "opciones": [
+          { "valor": "Sí", "texto_al_cambiar": "El inmueble cuenta con aire acondicionado." },
+          { "valor": "No", "texto_al_cambiar": "El inmueble no cuenta con aire acondicionado." }
+        ],
+        "clave": "aire_acondicionado"
+      },
+      {
+        "id": "renta-019",
+        "pregunta": "¿Existen restricciones de uso del inmueble? (ejemplo: no fumar, no realizar eventos, etc.)",
+        "tipo_input": "text",
+        "clave": "restricciones"
+      },
+      {
+        "id": "renta-020",
+        "pregunta": "¿Qué día se firma el contrato?",
+        "tipo_input": "date",
+        "clave": "fecha_firma"
+      },
+      {
+        "id": "renta-021",
+        "pregunta": "¿Qué día termina el contrato?",
+        "tipo_input": "date",
+        "clave": "fecha_terminacion"
+      }
+    ]
+  }
+  

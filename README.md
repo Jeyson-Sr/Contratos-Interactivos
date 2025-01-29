@@ -1,4 +1,4 @@
-# Generador de Contratos de Arrendamiento
+# Generador de Contrato Dinamicos
 
 Este proyecto es una aplicación web que permite generar contratos de arrendamiento de manera dinámica a través de un formulario interactivo.
 
